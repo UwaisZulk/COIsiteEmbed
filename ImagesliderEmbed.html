@@ -8,13 +8,21 @@
     <style>
         body {
             font-family: Arial, sans-serif;
+            background: #f7f7f7;
+            padding: 20px;
+            margin: 0;
         }
 
         .swiper-container {
             width: 100%;
-            padding: 60px 0;
             background: #f7f7f7;
             color: #000;
+        }
+
+        .swiper-wrapper {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
         }
 
         .swiper-slide {
@@ -31,8 +39,8 @@
         }
 
         .swiper-slide img {
-            width: 80px;
-            height: 80px;
+            width: 120px;
+            height: 120px;
             border-radius: 50%;
             margin-bottom: 20px;
         }
@@ -111,7 +119,7 @@
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script>
     var swiper = new Swiper('.swiper-container', {
-        slidesPerView: 3,  // Number of tiles per view
+        slidesPerView: 1,  // Adjusted to display one slide at a time in the grid
         spaceBetween: 30,  // Space between tiles
         pagination: {
             el: '.swiper-pagination',
