@@ -1,0 +1,110 @@
+<!-- Slider Image Section !-->
+<section class="swiper-container" style="margin-bottom: 0px; background: linear-gradient(to right, #24316a, #2d2828); color: rgb(255, 255, 255); padding: 60px 0; position: relative;">
+    <div class="swiper-wrapper">
+    
+        <div class="swiper-slide">
+            <img src="images/sliderimage3.jpg" alt="Slide 2" style="width: 100%; height: 400px; object-fit: cover;">
+        </div>
+
+        <div class="swiper-slide">
+            <img src="images/sliderimglondon.png" alt="Slide 3" style="width: 100%; height: 400px; object-fit: cover;">
+            <div class="caption" data-caption="LONDON FOREX TRAINING 2021">LONDON FOREX TRAINING 2021</div>
+        </div>
+
+        <div class="swiper-slide">
+            <img src="images/client2.jpg" alt="Slide 4" style="width: 100%; height: 400px; object-fit: cover;">
+            <div class="caption" data-caption="APPRENTICESHIP 2020">APPRENTICESHIP 2020</div>
+        </div>
+
+        <div class="swiper-slide">
+            <img src="images/sliderimage2.jpg" alt="Slide 5" style="width: 100%; height: 400px; object-fit: cover;">
+        </div>
+
+        <div class="swiper-slide">
+            <img src="images/sliderimage4pctrade.png" alt="Slide 6" style="width: 100%; height: 400px; object-fit: cover;">
+        </div>
+
+        <div class="swiper-slide">
+            <img src="images/SliderimgNewMarch24.jpg" alt="Slide 7" style="width: 100%; height: 400px; object-fit: cover;">
+        </div>
+    </div>
+    <div class="swiper-pagination"></div>
+</section>
+        
+        <style>
+
+            .swiper-slide {
+                position: relative;
+                overflow: hidden;
+                border-radius: 8px;
+                min-height: 300px; /* Adjust as needed */
+                max-width: 900px;
+            }
+        
+            .swiper-slide img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 8px;
+            }
+        
+            .caption {
+                font-size: 16px;
+                font-family: 'Times New Roman', sans-serif;
+                color: #ddd;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                background: rgba(0, 0, 0, 0.5);
+                padding: 10px;
+                line-height: 1;
+                border-radius: 0 0 8px 8px;
+                box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
+                opacity: 0;
+                transition: opacity 1s ease-out, transform 1s ease-out;
+            }
+        </style>
+
+        <script>
+            var swiper = new Swiper('.swiper-container', {
+                slidesPerView: 'auto',
+                spaceBetween: 10,
+                loop: true,
+                speed: 5000, // Initial speed value
+                autoplay: {
+                    delay: 3000, // Initial delay value
+                    disableOnInteraction: false,
+                },
+                on: {
+                    init: function () {
+                        // Set initial opacity for the caption of the first slide
+                        var firstSlide = this.slides[0];
+                        var caption = firstSlide.querySelector('.caption');
+                        if (caption) {
+                            caption.style.opacity = 1;
+                        }
+                    },
+                    slideChangeTransitionStart: function () {
+                        var captions = document.querySelectorAll('.caption');
+                        captions.forEach(function (caption) {
+                            caption.style.opacity = 0;
+                        });
+        
+                        var activeSlide = this.slides[this.activeIndex];
+                        var caption = activeSlide.querySelector('.caption');
+                        if (caption) {
+                            setTimeout(function () {
+                                caption.style.opacity = 1;
+                            }, 100); // Delay for better visual transition
+                        }
+                    },
+                },
+            });
+        </script>
+        
+       
+        
+         <!-- Include Swiper CSS and JS -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
