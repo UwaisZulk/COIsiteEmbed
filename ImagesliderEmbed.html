@@ -1,75 +1,132 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Swiper Slider</title>
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-            background: #f4f4f4;
-        }
-        .swiper-container {
-            width: 100%;
-            height: 400px;
-        }
-        .swiper-slide {
-            text-align: center;
-            font-size: 18px;
-            background: #fff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .swiper-slide img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-    </style>
-</head>
-<body>
-    <div class="swiper-container">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <img src="whoswho/DJI_20240506092520_0037_D.JPG" alt="Slide 2">
-                <div class="caption">Izzaldeen</div>
-            </div>
-            <div class="swiper-slide">
-                <img src="whos who/Izzaldeen.png" alt="Slide 3">
-                <div class="caption">LONDON FOREX TRAINING 2021</div>
-            </div>
-            <div class="swiper-slide">
-                <img src="images/client2.jpg" alt="Slide 4">
-                <div class="caption">APPRENTICESHIP 2020</div>
-            </div>
-            <div class="swiper-slide">
-                <img src="images/sliderimage2.jpg" alt="Slide 5">
-            </div>
-            <div class="swiper-slide">
-                <img src="images/sliderimage4pctrade.png" alt="Slide 6">
-            </div>
-            <div class="swiper-slide">
-                <img src="images/SliderimgNewMarch24.jpg" alt="Slide 7">
-            </div>
+<!-- Swiper Image Section -->
+<section class="swiper-container" style="margin-bottom: 0px; background: linear-gradient(to right, #24316a, #2d2828); color: rgb(255, 255, 255); padding: 60px 0; position: relative;">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <img src="whoswho/Izzaldeen.png" alt="Slide 2" style="width: 100%; height: 100%; object-fit: cover;">
+            <div class="caption">Image Caption 1</div>
         </div>
-        <div class="swiper-pagination"></div>
+        <div class="swiper-slide">
+            <img src="images/sliderimglondon.png" alt="Slide 3" style="width: 100%; height: 100%; object-fit: cover;">
+            <div class="caption">Image Caption 2</div>
+        </div>
+        <div class="swiper-slide">
+            <img src="images/client2.jpg" alt="Slide 4" style="width: 100%; height: 100%; object-fit: cover;">
+            <div class="caption">Image Caption 3</div>
+        </div>
+        <div class="swiper-slide">
+            <img src="images/sliderimage2.jpg" alt="Slide 5" style="width: 100%; height: 100%; object-fit: cover;">
+            <div class="caption">Image Caption 4</div>
+        </div>
+        <div class="swiper-slide">
+            <img src="images/sliderimage4pctrade.png" alt="Slide 6" style="width: 100%; height: 100%; object-fit: cover;">
+            <div class="caption">Image Caption 5</div>
+        </div>
+        <div class="swiper-slide">
+            <img src="images/SliderimgNewMarch24.jpg" alt="Slide 7" style="width: 100%; height: 100%; object-fit: cover;">
+            <div class="caption">Image Caption 6</div>
+        </div>
     </div>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script>
-        var swiper = new Swiper('.swiper-container', {
-            loop: true,
-            pagination: {
-                el: '.swiper-pagination',
+    <div class="swiper-pagination"></div>
+</section>
+
+<!-- Include Swiper CSS and JS -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<!-- CSS -->
+<style>
+    .swiper-container {
+        width: 100%;
+        padding: 60px 0;
+        background: linear-gradient(to right, #24316a, #2d2828);
+        color: #fff;
+    }
+    
+    .swiper-slide {
+        position: relative;
+        border-radius: 8px;
+        overflow: hidden;
+        min-height: 300px; /* Adjust as needed */
+    }
+    
+    .swiper-slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+    
+    .caption {
+        font-size: 16px;
+        font-family: 'Times New Roman', sans-serif;
+        color: #ddd;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        padding: 10px;
+        line-height: 1;
+        border-radius: 0 0 8px 8px;
+        opacity: 0;
+        transition: opacity 1s ease-out, transform 1s ease-out;
+    }
+    
+    .swiper-slide:hover .caption {
+        opacity: 1;
+    }
+</style>
+
+<!-- JavaScript -->
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        slidesPerView: 3,  // Number of tiles per view
+        spaceBetween: 30,  // Space between tiles
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        loop: true,
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
+        breakpoints: {
+            640: {
+                slidesPerView: 1,
+                spaceBetween: 10,
             },
-            autoplay: {
-                delay: 3000,
-                disableOnInteraction: false,
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 20,
             },
-        });
-    </script>
-</body>
-</html>
+            1024: {
+                slidesPerView: 3,
+                spaceBetween: 30,
+            },
+        },
+        on: {
+            init: function () {
+                var firstSlide = this.slides[0];
+                var caption = firstSlide.querySelector('.caption');
+                if (caption) {
+                    caption.style.opacity = 1;
+                }
+            },
+            slideChangeTransitionStart: function () {
+                var captions = document.querySelectorAll('.caption');
+                captions.forEach(function (caption) {
+                    caption.style.opacity = 0;
+                });
+
+                var activeSlide = this.slides[this.activeIndex];
+                var caption = activeSlide.querySelector('.caption');
+                if (caption) {
+                    setTimeout(function () {
+                        caption.style.opacity = 1;
+                    }, 100);
+                }
+            },
+        },
+    });
+</script>
