@@ -15,8 +15,7 @@
 
         .swiper-container {
             width: 100%;
-            max-width: 1200px; /* Adjust to the max width */
-            padding: 60px 0;
+            max-width: 1000px; /* Adjust to fit the SharePoint widget */
             background: #f7f7f7;
             color: #000;
             margin: auto;
@@ -26,7 +25,7 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            padding: 20px;
+            padding: 10px;
         }
 
         .testimonial {
@@ -38,46 +37,46 @@
             flex-direction: column;
             align-items: center;
             text-align: center;
-            padding: 20px;
-            margin: 10px;
+            padding: 10px;
+            margin: 5px;
         }
 
         .testimonial.top-row {
-            flex: 1 1 calc(33.333% - 20px);
-            max-width: calc(33.333% - 20px);
+            flex: 1 1 calc(33.333% - 10px);
+            max-width: calc(33.333% - 10px);
         }
 
         .testimonial.bottom-row {
-            flex: 1 1 calc(50% - 20px);
-            max-width: calc(50% - 20px);
+            flex: 1 1 calc(50% - 10px);
+            max-width: calc(50% - 10px);
         }
 
         .testimonial img {
-            width: 120px;
-            height: 120px;
+            width: 80px; /* Smaller image */
+            height: 80px; /* Smaller image */
             border-radius: 50%;
-            margin-bottom: 20px;
-        }
-
-        .testimonial-text {
-            font-size: 14px;
-            color: #555;
             margin-bottom: 10px;
         }
 
+        .testimonial-text {
+            font-size: 12px;
+            color: #555;
+            margin-bottom: 5px;
+        }
+
         .testimonial-author {
-            font-size: 16px;
+            font-size: 14px;
             font-weight: bold;
             color: #333;
         }
 
         .testimonial-role {
-            font-size: 14px;
+            font-size: 12px;
             color: #999;
         }
 
         .swiper-pagination {
-            bottom: 5px;
+            bottom: 10px;
         }
 
         .swiper-pagination-bullet {
@@ -162,20 +161,20 @@
 <script>
     var swiper = new Swiper('.swiper-container', {
         slidesPerView: 1,  // Show one slide at a time
-        spaceBetween: 10,  // Space between slides
+        spaceBetween: 30,  // Space between slides
         pagination: {
             el: '.swiper-pagination',
             clickable: true,
         },
         loop: true,
         autoplay: {
-            delay: 2500,
+            delay: 0,
             disableOnInteraction: false,
+            waitForTransition: false,
         },
+        speed: 5000,  // Adjust speed for continuous sliding effect
     });
 </script>
 
 </body>
 </html>
-
-
