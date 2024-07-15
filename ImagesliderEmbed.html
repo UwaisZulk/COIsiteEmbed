@@ -14,7 +14,7 @@
         }
 
         .swiper-container {
-            width: 100%;
+            width: 80%;
             background: #f7f7f7;
             color: #000;
         }
@@ -74,7 +74,7 @@
         }
 
         .swiper-pagination {
-            bottom: 10px;
+            bottom: 5px;
         }
 
         .swiper-pagination-bullet {
@@ -159,14 +159,14 @@
 <script>
     var swiper = new Swiper('.swiper-container', {
         slidesPerView: 1,  // Show one slide at a time
-        spaceBetween: 30,  // Space between slides
+        spaceBetween: 10,  // Space between slides
         pagination: {
             el: '.swiper-pagination',
             clickable: true,
         },
         loop: true,
         autoplay: {
-            delay: 3000,
+            delay: 2500,
             disableOnInteraction: false,
         },
     });
