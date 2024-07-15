@@ -21,14 +21,12 @@
 
         .swiper-slide {
             display: flex;
-            justify-content: space-between;
             flex-wrap: wrap;
+            justify-content: center;
         }
 
         .testimonial {
-            flex: 1 1 calc(33.333% - 20px);
             box-sizing: border-box;
-            margin-bottom: 20px;
             background: #fff;
             border-radius: 8px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.1);
@@ -37,6 +35,17 @@
             align-items: center;
             text-align: center;
             padding: 20px;
+            margin: 10px;
+        }
+
+        .testimonial.top-row {
+            flex: 1 1 calc(33.333% - 20px);
+            max-width: calc(33.333% - 20px);
+        }
+
+        .testimonial.bottom-row {
+            flex: 1 1 calc(50% - 20px);
+            max-width: calc(50% - 20px);
         }
 
         .testimonial img {
@@ -78,43 +87,67 @@
 <section class="swiper-container">
     <div class="swiper-wrapper">
         <div class="swiper-slide">
-            <div class="testimonial">
+            <div class="testimonial top-row">
                 <img src="whoswho/DJI_20240506092520_0037_D.JPG" alt="Person 1">
                 <div class="testimonial-text">"I would pay a lot more money to be a part of this."</div>
                 <div class="testimonial-author">Justin Moore</div>
                 <div class="testimonial-role">Founder of Creator Wizard</div>
             </div>
-            <div class="testimonial">
+            <div class="testimonial top-row">
                 <img src="images/sliderimglondon.png" alt="Person 2">
                 <div class="testimonial-text">"I implemented Jay's suggestions...one of them brought me $3k in a week"</div>
                 <div class="testimonial-author">Jake Thomas</div>
                 <div class="testimonial-role">Creator Hooks</div>
             </div>
-            <div class="testimonial">
+            <div class="testimonial top-row">
                 <img src="images/client2.jpg" alt="Person 3">
                 <div class="testimonial-text">"I've met so many fantastic creators, and have gotten so much actionable advice."</div>
                 <div class="testimonial-author">Joe Casabona</div>
                 <div class="testimonial-role">Podcast Systems Coach</div>
             </div>
-        </div>
-        <div class="swiper-slide">
-            <div class="testimonial">
+            <div class="testimonial bottom-row">
                 <img src="images/sliderimage2.jpg" alt="Person 4">
                 <div class="testimonial-text">"One month after joining The Lab, I pulled in $21k."</div>
                 <div class="testimonial-author">Claire Bartholic</div>
                 <div class="testimonial-role">The Planted Runner</div>
             </div>
-            <div class="testimonial">
+            <div class="testimonial bottom-row">
                 <img src="images/sliderimage4pctrade.png" alt="Person 5">
                 <div class="testimonial-text">"This community has been getting better and better since I joined."</div>
                 <div class="testimonial-author">Kyle Adams</div>
                 <div class="testimonial-role">Learn.community</div>
             </div>
-            <div class="testimonial">
+        </div>
+        <div class="swiper-slide">
+            <div class="testimonial top-row">
                 <img src="images/SliderimgNewMarch24.jpg" alt="Person 6">
                 <div class="testimonial-text">"I'm impressed Jay by how he's shaping this community."</div>
                 <div class="testimonial-author">Kevon Cheung</div>
                 <div class="testimonial-role">Unknown</div>
+            </div>
+            <div class="testimonial top-row">
+                <img src="images/sliderimglondon.png" alt="Person 7">
+                <div class="testimonial-text">"I implemented Jay's suggestions...one of them brought me $3k in a week"</div>
+                <div class="testimonial-author">Jake Thomas</div>
+                <div class="testimonial-role">Creator Hooks</div>
+            </div>
+            <div class="testimonial top-row">
+                <img src="images/client2.jpg" alt="Person 8">
+                <div class="testimonial-text">"I've met so many fantastic creators, and have gotten so much actionable advice."</div>
+                <div class="testimonial-author">Joe Casabona</div>
+                <div class="testimonial-role">Podcast Systems Coach</div>
+            </div>
+            <div class="testimonial bottom-row">
+                <img src="images/sliderimage2.jpg" alt="Person 9">
+                <div class="testimonial-text">"One month after joining The Lab, I pulled in $21k."</div>
+                <div class="testimonial-author">Claire Bartholic</div>
+                <div class="testimonial-role">The Planted Runner</div>
+            </div>
+            <div class="testimonial bottom-row">
+                <img src="images/sliderimage4pctrade.png" alt="Person 10">
+                <div class="testimonial-text">"This community has been getting better and better since I joined."</div>
+                <div class="testimonial-author">Kyle Adams</div>
+                <div class="testimonial-role">Learn.community</div>
             </div>
         </div>
     </div>
@@ -134,20 +167,6 @@
         autoplay: {
             delay: 3000,
             disableOnInteraction: false,
-        },
-        breakpoints: {
-            640: {
-                slidesPerView: 1,
-                spaceBetween: 10,
-            },
-            768: {
-                slidesPerView: 1,
-                spaceBetween: 20,
-            },
-            1024: {
-                slidesPerView: 1,
-                spaceBetween: 30,
-            },
         },
     });
 </script>
