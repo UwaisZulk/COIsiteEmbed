@@ -1,83 +1,114 @@
-<!-- Swiper Image Section -->
-<section class="swiper-container" style="margin-bottom: 0px; background: linear-gradient(to right, #24316a, #2d2828); color: rgb(255, 255, 255); padding: 60px 0; position: relative;">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonial Slider</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .swiper-container {
+            width: 100%;
+            padding: 60px 0;
+            background: #f7f7f7;
+            color: #000;
+        }
+
+        .swiper-slide {
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+            background: #fff;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .swiper-slide img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+
+        .testimonial-text {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .testimonial-author {
+            font-size: 16px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .testimonial-role {
+            font-size: 14px;
+            color: #999;
+        }
+
+        .swiper-pagination {
+            bottom: 10px;
+        }
+
+        .swiper-pagination-bullet {
+            background: #24316a;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Swiper -->
+<section class="swiper-container">
     <div class="swiper-wrapper">
         <div class="swiper-slide">
-            <img src="whoswho/DJI_20240506092520_0037_D.JPG" alt="Slide 2" style="width: 100%; height: 100%; object-fit: cover;">
-            <div class="caption">Image Caption 1</div>
+            <img src="whoswho/DJI_20240506092520_0037_D.JPG" alt="Person 1">
+            <div class="testimonial-text">"I would pay a lot more money to be a part of this."</div>
+            <div class="testimonial-author">Justin Moore</div>
+            <div class="testimonial-role">Founder of Creator Wizard</div>
         </div>
         <div class="swiper-slide">
-            <img src="images/sliderimglondon.png" alt="Slide 3" style="width: 100%; height: 100%; object-fit: cover;">
-            <div class="caption">Image Caption 2</div>
+            <img src="images/sliderimglondon.png" alt="Person 2">
+            <div class="testimonial-text">"I implemented Jay's suggestions...one of them brought me $3k in a week"</div>
+            <div class="testimonial-author">Jake Thomas</div>
+            <div class="testimonial-role">Creator Hooks</div>
         </div>
         <div class="swiper-slide">
-            <img src="images/client2.jpg" alt="Slide 4" style="width: 100%; height: 100%; object-fit: cover;">
-            <div class="caption">Image Caption 3</div>
+            <img src="images/client2.jpg" alt="Person 3">
+            <div class="testimonial-text">"I've met so many fantastic creators, and have gotten so much actionable advice."</div>
+            <div class="testimonial-author">Joe Casabona</div>
+            <div class="testimonial-role">Podcast Systems Coach</div>
         </div>
         <div class="swiper-slide">
-            <img src="images/sliderimage2.jpg" alt="Slide 5" style="width: 100%; height: 100%; object-fit: cover;">
-            <div class="caption">Image Caption 4</div>
+            <img src="images/sliderimage2.jpg" alt="Person 4">
+            <div class="testimonial-text">"One month after joining The Lab, I pulled in $21k."</div>
+            <div class="testimonial-author">Claire Bartholic</div>
+            <div class="testimonial-role">The Planted Runner</div>
         </div>
         <div class="swiper-slide">
-            <img src="images/sliderimage4pctrade.png" alt="Slide 6" style="width: 100%; height: 100%; object-fit: cover;">
-            <div class="caption">Image Caption 5</div>
+            <img src="images/sliderimage4pctrade.png" alt="Person 5">
+            <div class="testimonial-text">"This community has been getting better and better since I joined."</div>
+            <div class="testimonial-author">Kyle Adams</div>
+            <div class="testimonial-role">Learn.community</div>
         </div>
         <div class="swiper-slide">
-            <img src="images/SliderimgNewMarch24.jpg" alt="Slide 7" style="width: 100%; height: 100%; object-fit: cover;">
-            <div class="caption">Image Caption 6</div>
+            <img src="images/SliderimgNewMarch24.jpg" alt="Person 6">
+            <div class="testimonial-text">"I'm impressed Jay by how he's shaping this community."</div>
+            <div class="testimonial-author">Kevon Cheung</div>
+            <div class="testimonial-role">Unknown</div>
         </div>
     </div>
     <div class="swiper-pagination"></div>
 </section>
 
-<!-- Include Swiper CSS and JS -->
-<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
-<!-- CSS -->
-<style>
-    .swiper-container {
-        width: 100%;
-        padding: 60px 0;
-        background: linear-gradient(to right, #24316a, #2d2828);
-        color: #fff;
-    }
-    
-    .swiper-slide {
-        position: relative;
-        border-radius: 8px;
-        overflow: hidden;
-        min-height: 300px; /* Adjust as needed */
-    }
-    
-    .swiper-slide img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border-radius: 8px;
-    }
-    
-    .caption {
-        font-size: 16px;
-        font-family: 'Times New Roman', sans-serif;
-        color: #ddd;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        background: rgba(0, 0, 0, 0.5);
-        padding: 10px;
-        line-height: 1;
-        border-radius: 0 0 8px 8px;
-        opacity: 0;
-        transition: opacity 1s ease-out, transform 1s ease-out;
-    }
-    
-    .swiper-slide:hover .caption {
-        opacity: 1;
-    }
-</style>
-
-<!-- JavaScript -->
 <script>
     var swiper = new Swiper('.swiper-container', {
         slidesPerView: 3,  // Number of tiles per view
@@ -105,28 +136,8 @@
                 spaceBetween: 30,
             },
         },
-        on: {
-            init: function () {
-                var firstSlide = this.slides[0];
-                var caption = firstSlide.querySelector('.caption');
-                if (caption) {
-                    caption.style.opacity = 1;
-                }
-            },
-            slideChangeTransitionStart: function () {
-                var captions = document.querySelectorAll('.caption');
-                captions.forEach(function (caption) {
-                    caption.style.opacity = 0;
-                });
-
-                var activeSlide = this.slides[this.activeIndex];
-                var caption = activeSlide.querySelector('.caption');
-                if (caption) {
-                    setTimeout(function () {
-                        caption.style.opacity = 1;
-                    }, 100);
-                }
-            },
-        },
     });
 </script>
+
+</body>
+</html>
