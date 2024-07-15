@@ -9,7 +9,7 @@
         body {
             font-family: Arial, sans-serif;
             background: #f7f7f7;
-            padding: 15px;
+            padding: 20px;
             margin: 0;
         }
 
@@ -85,7 +85,7 @@
 <body>
 
 <!-- Swiper -->
-<section class="swiper-container" style="height: auto;">
+<section class="swiper-container">
     <div class="swiper-wrapper">
         <div class="swiper-slide">
             <div class="testimonial top-row">
@@ -159,14 +159,14 @@
 <script>
     var swiper = new Swiper('.swiper-container', {
         slidesPerView: 1,  // Show one slide at a time
-        spaceBetween: 20,  // Space between slides
+        spaceBetween: 30,  // Space between slides
         pagination: {
             el: '.swiper-pagination',
             clickable: true,
         },
         loop: true,
         autoplay: {
-            delay: 2500,
+            delay: 3000,
             disableOnInteraction: false,
         },
     });
@@ -174,3 +174,5 @@
 
 </body>
 </html>
+
+
