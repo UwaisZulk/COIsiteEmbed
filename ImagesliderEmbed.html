@@ -9,13 +9,13 @@
         body {
             font-family: Arial, sans-serif;
             background: #f7f7f7;
-            padding: 20px;
+            padding: 10px;
             margin: 0;
         }
 
         .swiper-container {
             width: 100%;
-            max-width: 500px; /* Adjust to fit the SharePoint widget */
+            max-width: 1200px; /* Adjust to fit the SharePoint widget */
             background: #f7f7f7;
             color: #000;
             margin: auto;
@@ -25,7 +25,7 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            padding: 10px;
+            padding: 0px;
         }
 
         .testimonial {
@@ -37,12 +37,12 @@
             flex-direction: column;
             align-items: center;
             text-align: center;
-            padding: 10px;
-            margin: 5px;
+            padding: 0px;
+            margin: 3px;
         }
 
         .testimonial.top-row {
-            flex: 1 1 calc(33.333% - 10px);
+            flex: 1 1 calc(33.333% - 5px);
             max-width: calc(33.333% - 10px);
         }
 
@@ -52,26 +52,26 @@
         }
 
         .testimonial img {
-            width: 80px; /* Smaller image */
-            height: 80px; /* Smaller image */
-            border-radius: 50%;
-            margin-bottom: 10px;
-        }
-
-        .testimonial-text {
-            font-size: 12px;
-            color: #555;
+            width: 120px; /* Smaller image */
+            height: 120px; /* Smaller image */
+            border-radius: 100px;
             margin-bottom: 5px;
         }
 
+        .testimonial-text {
+            font-size: 8px;
+            color: #555;
+            margin-bottom: 1px;
+        }
+
         .testimonial-author {
-            font-size: 14px;
+            font-size: 15px;
             font-weight: bold;
             color: #333;
         }
 
         .testimonial-role {
-            font-size: 12px;
+            font-size: 10px;
             color: #999;
         }
 
@@ -91,16 +91,16 @@
     <div class="swiper-wrapper">
         <div class="swiper-slide">
             <div class="testimonial top-row">
-                <img src="whoswho/DJI_20240506092520_0037_D.JPG" alt="Person 1">
-                <div class="testimonial-text">"I would pay a lot more money to be a part of this."</div>
-                <div class="testimonial-author">Justin Moore</div>
-                <div class="testimonial-role">Founder of Creator Wizard</div>
+                <img src="Patricia.png" alt="Person 1">
+                <div class="testimonial-text">"Organization Transformation, Change, Management & Future of work"</div>
+                <div class="testimonial-author">Patricia Tan</div>
+                <div class="testimonial-role">Principal Consultant</div>
             </div>
             <div class="testimonial top-row">
-                <img src="images/sliderimglondon.png" alt="Person 2">
-                <div class="testimonial-text">"I implemented Jay's suggestions...one of them brought me $3k in a week"</div>
-                <div class="testimonial-author">Jake Thomas</div>
-                <div class="testimonial-role">Creator Hooks</div>
+                <img src="Eric.png" alt="Person 2">
+                <div class="testimonial-text">"Quote"</div>
+                <div class="testimonial-author">Eric Tachibana</div>
+                <div class="testimonial-role">Senior Client Partner</div>
             </div>
             <div class="testimonial top-row">
                 <img src="images/client2.jpg" alt="Person 3">
@@ -161,14 +161,14 @@
 <script>
     var swiper = new Swiper('.swiper-container', {
         slidesPerView: 1,  // Show one slide at a time
-        spaceBetween: 30,  // Space between slides
+        spaceBetween: 5,  // Space between slides
         pagination: {
             el: '.swiper-pagination',
             clickable: true,
         },
         loop: true,
         autoplay: {
-            delay: 0,
+            delay: 10,
             disableOnInteraction: false,
             waitForTransition: false,
         },
@@ -178,3 +178,6 @@
 
 </body>
 </html>
+
+
+ <!--<iframe src="https://uwaiszulk.github.io/COIsiteEmbed/ImagesliderEmbed" width="100%" height="400" frameborder="0"></iframe>-->
