@@ -15,7 +15,7 @@
 
         .swiper-container {
             width: 100%;
-            max-width: 1200px;
+            max-width: 1200px; /* Adjust to fit the SharePoint widget */
             background: #f7f7f7;
             color: #000;
             margin: auto;
@@ -25,55 +25,54 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            padding: 0;
+            padding: 0px;
         }
 
         .testimonial {
-            position: relative;
             box-sizing: border-box;
             background: #fff;
             border-radius: 8px;
-            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
             display: flex;
             flex-direction: column;
             align-items: center;
             text-align: center;
-            padding: 0;
-            margin: 5px;
-            max-width: calc(33.333% - 10px); /* Adjusted to fit three per row */
-            flex: 1 1 calc(33.333% - 10px);
+            padding: 0px;
+            margin: 3px;
+        }
+
+        .testimonial.top-row {
+            flex: 1 1 calc(33.333% - 5px);
+            max-width: calc(33.333% - 10px);
+        }
+
+        .testimonial.bottom-row {
+            flex: 1 1 calc(50% - 10px);
+            max-width: calc(50% - 10px);
         }
 
         .testimonial img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .testimonial-content {
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-            background: rgba(0, 0, 0, 0.7);
-            color: #fff;
-            padding: 10px;
-            box-sizing: border-box;
+            width: 120px; /* Smaller image */
+            height: 120px; /* Smaller image */
+            border-radius: 100px;
+            margin-bottom: 5px;
         }
 
         .testimonial-text {
-            font-size: 14px;
-            margin: 0;
+            font-size: 8px;
+            color: #555;
+            margin-bottom: 1px;
         }
 
         .testimonial-author {
-            font-size: 18px;
+            font-size: 15px;
             font-weight: bold;
-            margin: 5px 0 0;
+            color: #333;
         }
 
         .testimonial-role {
-            font-size: 12px;
-            margin: 0;
+            font-size: 10px;
+            color: #999;
         }
 
         .swiper-pagination {
@@ -91,55 +90,67 @@
 <section class="swiper-container">
     <div class="swiper-wrapper">
         <div class="swiper-slide">
-            <div class="testimonial">
-                <img src="whoswo/Izzaldeen.png" alt="Person 1">
-                <div class="testimonial-content">
-                    <div class="testimonial-text">"Organization Transformation, Change, Management & Future of work"</div>
-                    <div class="testimonial-author">Patricia Tan</div>
-                    <div class="testimonial-role">Principal Consultant</div>
-                </div>
+            <div class="testimonial top-row">
+                <img src="whoswho/Patricia.png" alt="Person 1">
+                <div class="testimonial-text">"Organization Transformation, Change, Management & Future of work"</div>
+                <div class="testimonial-author">Patricia Tan</div>
+                <div class="testimonial-role">Principal Consultant</div>
             </div>
-            <div class="testimonial">
-                <img src="whoswo/Nurman.png" alt="Person 2">
-                <div class="testimonial-content">
-                    <div class="testimonial-text">"Quote"</div>
-                    <div class="testimonial-author">Eric Tachibana</div>
-                    <div class="testimonial-role">Senior Client Partner</div>
-                </div>
+            <div class="testimonial top-row">
+                <img src="whoswho/Eric.png" alt="Person 2">
+                <div class="testimonial-text">"Quote"</div>
+                <div class="testimonial-author">Eric Tachibana</div>
+                <div class="testimonial-role">Senior Client Partner</div>
             </div>
-            <div class="testimonial">
-                <img src="whoswo/KE.png" alt="Person 3">
-                <div class="testimonial-content">
-                    <div class="testimonial-text">"I've met so many fantastic creators, and have gotten so much actionable advice."</div>
-                    <div class="testimonial-author">Joe Casabona</div>
-                    <div class="testimonial-role">Podcast Systems Coach</div>
-                </div>
+            <div class="testimonial top-row">
+                <img src="images/client2.jpg" alt="Person 3">
+                <div class="testimonial-text">"I've met so many fantastic creators, and have gotten so much actionable advice."</div>
+                <div class="testimonial-author">Joe Casabona</div>
+                <div class="testimonial-role">Podcast Systems Coach</div>
+            </div>
+            <div class="testimonial bottom-row">
+                <img src="images/sliderimage2.jpg" alt="Person 4">
+                <div class="testimonial-text">"One month after joining The Lab, I pulled in $21k."</div>
+                <div class="testimonial-author">Claire Bartholic</div>
+                <div class="testimonial-role">The Planted Runner</div>
+            </div>
+            <div class="testimonial bottom-row">
+                <img src="images/sliderimage4pctrade.png" alt="Person 5">
+                <div class="testimonial-text">"This community has been getting better and better since I joined."</div>
+                <div class="testimonial-author">Kyle Adams</div>
+                <div class="testimonial-role">Learn.community</div>
             </div>
         </div>
         <div class="swiper-slide">
-            <div class="testimonial">
-                <img src="whoswo/Shadeah.png" alt="Person 4">
-                <div class="testimonial-content">
-                    <div class="testimonial-text">"One month after joining The Lab, I pulled in $21k."</div>
-                    <div class="testimonial-author">Claire Bartholic</div>
-                    <div class="testimonial-role">The Planted Runner</div>
-                </div>
+            <div class="testimonial top-row">
+                <img src="images/SliderimgNewMarch24.jpg" alt="Person 6">
+                <div class="testimonial-text">"I'm impressed Jay by how he's shaping this community."</div>
+                <div class="testimonial-author">Kevon Cheung</div>
+                <div class="testimonial-role">Unknown</div>
             </div>
-            <div class="testimonial">
-                <img src="whoswo/eric.png" alt="Person 5">
-                <div class="testimonial-content">
-                    <div class="testimonial-text">"This community has been getting better and better since I joined."</div>
-                    <div class="testimonial-author">Kyle Adams</div>
-                    <div class="testimonial-role">Learn.community</div>
-                </div>
+            <div class="testimonial top-row">
+                <img src="images/sliderimglondon.png" alt="Person 7">
+                <div class="testimonial-text">"I implemented Jay's suggestions...one of them brought me $3k in a week"</div>
+                <div class="testimonial-author">Jake Thomas</div>
+                <div class="testimonial-role">Creator Hooks</div>
             </div>
-            <div class="testimonial">
-                <img src="whoswo/patricia.png" alt="Person 6">
-                <div class="testimonial-content">
-                    <div class="testimonial-text">"I'm impressed Jay by how he's shaping this community."</div>
-                    <div class="testimonial-author">Kevon Cheung</div>
-                    <div class="testimonial-role">Unknown</div>
-                </div>
+            <div class="testimonial top-row">
+                <img src="images/client2.jpg" alt="Person 8">
+                <div class="testimonial-text">"I've met so many fantastic creators, and have gotten so much actionable advice."</div>
+                <div class="testimonial-author">Joe Casabona</div>
+                <div class="testimonial-role">Podcast Systems Coach</div>
+            </div>
+            <div class="testimonial bottom-row">
+                <img src="images/sliderimage2.jpg" alt="Person 9">
+                <div class="testimonial-text">"One month after joining The Lab, I pulled in $21k."</div>
+                <div class="testimonial-author">Claire Bartholic</div>
+                <div class="testimonial-role">The Planted Runner</div>
+            </div>
+            <div class="testimonial bottom-row">
+                <img src="images/sliderimage4pctrade.png" alt="Person 10">
+                <div class="testimonial-text">"This community has been getting better and better since I joined."</div>
+                <div class="testimonial-author">Kyle Adams</div>
+                <div class="testimonial-role">Learn.community</div>
             </div>
         </div>
     </div>
@@ -149,20 +160,24 @@
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script>
     var swiper = new Swiper('.swiper-container', {
-        slidesPerView: 1,
-        spaceBetween: 10,
+        slidesPerView: 1,  // Show one slide at a time
+        spaceBetween: 5,  // Space between slides
         pagination: {
             el: '.swiper-pagination',
             clickable: true,
         },
         loop: true,
         autoplay: {
-            delay: 5000,
+            delay: 10,
             disableOnInteraction: false,
+            waitForTransition: false,
         },
-        speed: 1000,
+        speed: 5000,  // Adjust speed for continuous sliding effect
     });
 </script>
 
 </body>
 </html>
+
+
+ <!--<iframe src="https://uwaiszulk.github.io/COIsiteEmbed/ImagesliderEmbed" width="100%" height="400" frameborder="0"></iframe>-->
