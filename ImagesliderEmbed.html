@@ -23,7 +23,17 @@
 
         .swiper-wrapper {
             display: flex;
-            flex-wrap: wrap;
+            flex-wrap: nowrap; /* Ensure the wrapper doesn't wrap */
+            animation: scroll 10s linear infinite; /* Continuous scrolling animation */
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%); /* Adjust based on total width of content */
+            }
         }
 
         .swiper-slide {
@@ -94,6 +104,59 @@
 <!-- Swiper -->
 <section class="swiper-container">
     <div class="swiper-wrapper">
+        <!-- First Set of Testimonials -->
+        <div class="swiper-slide">
+            <div class="testimonial">
+                <img src="whoswho/Izzaldeen.png" alt="Person 1">
+                <div class="testimonial-content">
+                    <div class="testimonial-text">"Organization Transformation, Change, Management & Future of work"</div>
+                    <div class="testimonial-author">Patricia Tan</div>
+                    <div class="testimonial-role">Principal Consultant</div>
+                </div>
+            </div>
+            <div class="testimonial">
+                <img src="whoswho/Nurman.png" alt="Person 2">
+                <div class="testimonial-content">
+                    <div class="testimonial-text">"Quote"</div>
+                    <div class="testimonial-author">Eric Tachibana</div>
+                    <div class="testimonial-role">Senior Client Partner</div>
+                </div>
+            </div>
+            <div class="testimonial">
+                <img src="whoswho/KE.png" alt="Person 3">
+                <div class="testimonial-content">
+                    <div class="testimonial-text">"I've met so many fantastic creators, and have gotten so much actionable advice."</div>
+                    <div class="testimonial-author">Joe Casabona</div>
+                    <div class="testimonial-role">Podcast Systems Coach</div>
+                </div>
+            </div>
+            <div class="testimonial">
+                <img src="whoswho/Shadeah.png" alt="Person 4">
+                <div class="testimonial-content">
+                    <div class="testimonial-text">"One month after joining The Lab, I pulled in $21k."</div>
+                    <div class="testimonial-author">Claire Bartholic</div>
+                    <div class="testimonial-role">The Planted Runner</div>
+                </div>
+            </div>
+            <div class="testimonial">
+                <img src="whoswho/Eric.png" alt="Person 5">
+                <div class="testimonial-content">
+                    <div class="testimonial-text">"This community has been getting better and better since I joined."</div>
+                    <div class="testimonial-author">Kyle Adams</div>
+                    <div class="testimonial-role">Learn.community</div>
+                </div>
+            </div>
+            <div class="testimonial">
+                <img src="whoswho/Patricia.png" alt="Person 6">
+                <div class="testimonial-content">
+                    <div class="testimonial-text">"I'm impressed Jay by how he's shaping this community."</div>
+                    <div class="testimonial-author">Kevon Cheung</div>
+                    <div class="testimonial-role">Unknown</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Duplicate Set of Testimonials for Continuous Loop -->
         <div class="swiper-slide">
             <div class="testimonial">
                 <img src="whoswho/Izzaldeen.png" alt="Person 1">
@@ -149,22 +212,6 @@
 </section>
 
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-<script>
-    var swiper = new Swiper('.swiper-container', {
-        slidesPerView: 'auto',  // Show all slides
-        spaceBetween: 10,  // Space between slides
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
-        loop: true,
-        autoplay: {
-            delay: 1,  // Continuously slide
-            disableOnInteraction: false,
-        },
-        speed: 5000,  // Adjust speed for continuous sliding effect
-    });
-</script>
 
 </body>
 </html>
